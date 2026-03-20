@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav>
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/villas/' | relative_url }}">Villas</a>
+        <a href="{{ '/apartments/' | relative_url }}">Apartments</a>
+        <a href="{{ '/owners/' | relative_url }}">Owners</a>
+        <a href="{{ '/experiences/' | relative_url }}">Experiences</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        <a href="{{ '/press/' | relative_url }}">Press</a>
+        <a href="{{ '/contacts/' | relative_url }}">Contacts</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>{{ site.title }}</h4>
+        <p>Luxury stays and property management on Lake Como.</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <p><a href="{{ '/owners/' | relative_url }}">Owners</a></p>
+        <p><a href="{{ '/blog/' | relative_url }}">Blog</a></p>
+        <p><a href="{{ '/contacts/' | relative_url }}">Contacts</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
