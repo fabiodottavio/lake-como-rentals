@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <p class="eyebrow">Lake Como hospitality</p>
+      <h1>Luxury villas, apartments and local experiences on Lake Como</h1>
+      <p class="lead">
+        Discover curated stays and a premium management service for property owners.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-dark" href="{{ '/apartments/' | relative_url }}">Explore properties</a>
+        <a class="btn btn-light" href="{{ '/owners/' | relative_url }}">List your property</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Featured stays</p>
+      <h2>Handpicked properties</h2>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1400&auto=format&fit=crop" alt="Villa on Lake Como">
+        <div class="card-body">
+          <h3>Elegant Villa with Lake View</h3>
+          <p>Private garden, terrace and refined interiors.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1400&auto=format&fit=crop" alt="Luxury apartment">
+        <div class="card-body">
+          <h3>Luxury Apartment in Como</h3>
+          <p>Central location, premium design and easy access.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1400&auto=format&fit=crop" alt="Exclusive stay">
+        <div class="card-body">
+          <h3>Exclusive Family Stay</h3>
+          <p>Comfort, privacy and authentic local charm.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container split">
+    <div>
+      <p class="eyebrow">For owners</p>
+      <h2>Professional property management on Lake Como</h2>
+      <p>
+        We help owners maximize value, preserve the asset and deliver a premium guest experience.
+      </p>
+      <a class="btn btn-dark" href="{{ '/owners/' | relative_url }}">Discover owner services</a>
+    </div>
+    <div class="panel">
+      <ul>
+        <li>Revenue management</li>
+        <li>Guest communication</li>
+        <li>Maintenance coordination</li>
+        <li>Interior styling and setup</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">From the blog</p>
+      <h2>Como tips & inspiration</h2>
+    </div>
+    <div class="blog-grid">
+      {% for post in site.posts limit:3 %}
+      <article class="post-card">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncate: 130 }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
