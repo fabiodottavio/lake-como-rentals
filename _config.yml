@@ -1,0 +1,19 @@
+title: "Lake Como Stays"
+description: "Luxury villas, apartments and experiences on Lake Como"
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: /blog/:title/
+collections:
+  properties:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
